@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odin Recipes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      background: #faf7f2;
+      color: #333;
+    }
+
+    header {
+      background: #8b2e00;
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    header h1 { font-size: 2.5rem; letter-spacing: 2px; }
+    header p { margin-top: 0.5rem; opacity: 0.85; font-size: 1.1rem; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #a33800;
+      padding: 0.75rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffe8d6;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover { background: rgba(255,255,255,0.2); }
+
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .recipe {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .recipe img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .recipe-body { padding: 2rem; }
+
+    .recipe-body h2 {
+      font-size: 1.8rem;
+      color: #8b2e00;
+      margin-bottom: 0.75rem;
+    }
+
+    .recipe-body .description {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .recipe-body h3 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #a33800;
+      border-bottom: 2px solid #f0e0d0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.9rem;
+      margin-top: 1.5rem;
+    }
+
+    .recipe-body ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      line-height: 1.9;
+      color: #444;
+    }
+
+    .recipe-body ol {
+      padding-left: 1.5rem;
+      line-height: 2;
+      color: #444;
+    }
+
+    .recipe-body ol li { margin-bottom: 0.3rem; }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 0.5rem 1.2rem;
+      background: #8b2e00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .back-to-top:hover { background: #a33800; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Odin Recipes</h1>
+  <p>Simple, delicious recipes for every occasion</p>
+</header>
+
+<nav>
+  <a href="#classic-beef-tacos">Classic Beef Tacos</a>
+  <a href="#spaghetti-carbonara">Spaghetti Carbonara</a>
+  <a href="#honey-garlic-salmon">Honey Garlic Salmon</a>
+</nav>
+
+<main>
+
+  <!-- Classic Beef Tacos -->
+  <section class="recipe" id="classic-beef-tacos">
+    <img
+      src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&auto=format&fit=crop"
+      alt="Classic Beef Tacos"
+    />
+    <div class="recipe-body">
+      <h2>Classic Beef Tacos</h2>
+      <p class="description">
+        These Classic Beef Tacos are a crowd-pleasing Mexican-inspired dish that's quick, easy, and
+        endlessly customizable. Seasoned ground beef is piled into warm tortillas and topped with
+        fresh veggies, cheese, and your favorite sauces.
+      </p>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>500g ground beef</li>
+        <li>8 small flour or corn tortillas</li>
+        <li>1 packet taco seasoning (or 1 tsp each: cumin, chili powder, garlic powder, paprika)</li>
+        <li>1 cup shredded cheddar cheese</li>
+        <li>1 cup shredded lettuce</li>
+        <li>2 tomatoes, diced</li>
+        <li>1 avocado, sliced</li>
+        <li>Sour cream and salsa for serving</li>
+        <li>Salt to taste</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li>Heat a skillet over medium-high heat. Add ground beef and cook, breaking it apart, until browned.</li>
+        <li>Drain excess fat from the skillet.</li>
+        <li>Add taco seasoning and 1/4 cup of water to the beef. Stir and simmer for 3–5 minutes until the sauce thickens.</li>
+        <li>Warm the tortillas in a dry pan or microwave.</li>
+        <li>Assemble the tacos: place beef on each tortilla, then top with lettuce, tomato, cheese, and avocado.</li>
+        <li>Serve with sour cream and salsa on the side.</li>
+      </ol>
+      <a href="#" class="back-to-top">&#8593; Back to Top</a>
+    </div>
+  </section>
+
+  <!-- Spaghetti Carbonara -->
+  <section class="recipe" id="spaghetti-carbonara">
+    <img
+      src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=900&auto=format&fit=crop"
+      alt="Spaghetti Carbonara"
+    />
+    <div class="recipe-body">
+      <h2>Spaghetti Carbonara</h2>
+      <p class="description">
+        Spaghetti Carbonara is a classic Italian pasta dish that comes together in under 30 minutes.
+        It features a rich, creamy sauce made from eggs, Parmesan cheese, and crispy pancetta —
+        no cream needed. Simple ingredients, big flavor.
+      </p>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>400g spaghetti</li>
+        <li>200g pancetta or bacon, diced</li>
+        <li>4 large eggs</li>
+        <li>100g grated Parmesan cheese</li>
+        <li>2 cloves garlic, minced</li>
+        <li>Salt and black pepper to taste</li>
+        <li>Fresh parsley for garnish</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li>Bring a large pot of salted water to a boil and cook spaghetti until al dente. Reserve 1 cup of pasta water before draining.</li>
+        <li>In a bowl, whisk together eggs and grated Parmesan. Set aside.</li>
+        <li>In a large skillet over medium heat, cook pancetta until crispy. Add garlic and cook for 1 more minute.</li>
+        <li>Remove the skillet from heat. Add the drained spaghetti and toss to coat with the pancetta fat.</li>
+        <li>Pour the egg and cheese mixture over the pasta, tossing quickly. Add pasta water a little at a time until the sauce is creamy.</li>
+        <li>Season with salt and plenty of black pepper. Garnish with parsley and serve immediately.</li>
+      </ol>
+      <a href="#" class="back-to-top">&#8593; Back to Top</a>
+    </div>
+  </section>
+
+  <!-- Honey Garlic Salmon -->
+  <section class="recipe" id="honey-garlic-salmon">
+    <img
+      src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&auto=format&fit=crop"
+      alt="Honey Garlic Salmon"
+    />
+    <div class="recipe-body">
+      <h2>Honey Garlic Salmon</h2>
+      <p class="description">
+        Honey Garlic Salmon is a simple yet impressive dish that's packed with flavor. The salmon
+        fillets are pan-seared until golden and glazed with a sweet and savory honey garlic sauce.
+        Perfect for a healthy weeknight dinner in just 20 minutes.
+      </p>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>4 salmon fillets (about 150g each)</li>
+        <li>3 tablespoons honey</li>
+        <li>3 cloves garlic, minced</li>
+        <li>2 tablespoons soy sauce</li>
+        <li>1 tablespoon olive oil</li>
+        <li>1 tablespoon lemon juice</li>
+        <li>Salt and black pepper to taste</li>
+        <li>Fresh lemon slices and parsley for garnish</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li>Pat salmon fillets dry with paper towels. Season both sides with salt and pepper.</li>
+        <li>Mix together honey, minced garlic, soy sauce, and lemon juice in a small bowl. Set aside.</li>
+        <li>Heat olive oil in a skillet over medium-high heat. Place salmon fillets skin-side down and cook for 4–5 minutes.</li>
+        <li>Flip the fillets and pour the honey garlic sauce over them. Cook for another 3–4 minutes, spooning the sauce over the salmon as it cooks.</li>
+        <li>Remove from heat once the salmon is cooked through and the sauce has thickened slightly.</li>
+        <li>Garnish with lemon slices and fresh parsley. Serve immediately.</li>
+      </ol>
+      <a href="#" class="back-to-top">&#8593; Back to Top</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Odin Recipes</p>
+</footer>
+
+</body>
+</html>
